@@ -1,0 +1,32 @@
+@@include('components/_head.pug', {
+    "title": "Страница",
+})
+
+main 
+    @@include('components/_header.pug')
+
+    section.home(style="height: calc(100vh - 206px)")
+        .containers 
+            .home__wrapper 
+                .menu 
+                    ul.menu__list
+                        li.menu__item#account 
+                            a(href="/") Аккаунт 
+                        li.menu__item#report 
+                            a(href="/") Жалобы 
+                        li.menu__item#appli 
+                            a(href="/") Заявки 
+                        li.menu__item#exit 
+                            a(href="/") Выйти из аккаунта 
+                .home__blocks
+                    .home__welcome
+                        h2.home__welcome-title Приступим к работе
+                        p.home__welcome-text Для начала работы, выберите вкладку “Жалобы” или <br /> “Заявки”, после чего сможете с ним работать
+
+
+
+
+@@include('components/_footer.pug')
+
+@@include('components/_script.pug')
+

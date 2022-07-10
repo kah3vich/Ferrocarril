@@ -1,0 +1,62 @@
+@@include('components/_head.pug', {
+    "title": "Страница",
+})
+
+main 
+    @@include('components/_header.pug')
+
+    section.home
+        .containers 
+            .home__wrapper 
+                .menu 
+                    ul.menu__list
+                        li.menu__item#account 
+                            a(href="/") Аккаунт 
+                        li.menu__item#report 
+                            a(href="/") Жалобы 
+                        li.menu__item.menu__item-a#appli 
+                            a(href="/") Заявки 
+                        li.menu__item#exit 
+                            a(href="/") Выйти из аккаунта 
+                .home__blocks
+                    .home__appliList
+                        .home__appliList-tabs
+                            a(href="/").home__appliList-tab.home__appliList-tab__a
+                                h5 Новые заявки
+                                span 3
+                            a(href="/").home__appliList-tab
+                                h5 История заявок
+                        .home__appliList-line
+                        .home__appliList-search
+                            label.home__appliList-label(for="appliSearch")
+                                img( class="home__appliList-decor" src="./svg/search.svg" alt="icon")
+                                input(type="text" class="home__appliList-input" placeholder="Поиск")
+                                img( class="home__appliList-decor" src="./svg/close.svg" alt="icon")
+                        .home__appliList-lines
+                        .home__appliList-list
+                            a(href="/").home__appliList-item 
+                                ul.home__appliList-nav 
+                                    li.home__appliList-nav__i Номер заявки
+                                    li.home__appliList-nav__i Грузоотправитель
+                                    li.home__appliList-nav__i Грузополучатель
+                                ul.home__appliList-content 
+                                    li.home__appliList-content__i Заявка №1
+                                    li.home__appliList-content__i DPD
+                                    li.home__appliList-content__i ИНН 7777777777
+                            a(href="/").home__appliList-item 
+                                ul.home__appliList-nav 
+                                    li.home__appliList-nav__i Номер заявки
+                                    li.home__appliList-nav__i Грузоотправитель
+                                    li.home__appliList-nav__i Грузополучатель
+                                ul.home__appliList-content 
+                                    li.home__appliList-content__i Заявка №1
+                                    li.home__appliList-content__i DPD
+                                    li.home__appliList-content__i ИНН 7777777777
+
+
+
+
+@@include('components/_footer.pug')
+
+@@include('components/_script.pug')
+

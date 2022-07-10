@@ -1,0 +1,62 @@
+@@include('components/_head.pug', {
+    "title": "Страница",
+})
+
+main 
+    @@include('components/_header.pug')
+
+    section.home
+        .containers 
+            .home__wrapper 
+                .menu 
+                    ul.menu__list
+                        li.menu__item#account 
+                            a(href="/") Аккаунт 
+                        li.menu__item.menu__item-a#report 
+                            a(href="/") Жалобы 
+                        li.menu__item#appli 
+                            a(href="/") Заявки 
+                        li.menu__item#exit 
+                            a(href="/") Выйти из аккаунта 
+                .home__blocks
+                    .home__reportList
+                        .home__reportList-tabs
+                            a(href="/").home__reportList-tab.home__reportList-tab__a
+                                h5 Новые жалобы
+                                span 3
+                            a(href="/").home__reportList-tab
+                                h5 История жалоб
+                        .home__reportList-line
+                        .home__reportList-search
+                            label.home__reportList-label(for="reportSearch")
+                                img( class="home__reportList-decor" src="./svg/search.svg" alt="icon")
+                                input(type="text" class="home__reportList-input" placeholder="Поиск")
+                                img( class="home__reportList-decor" src="./svg/close.svg" alt="icon")
+                        .home__reportList-lines
+                        .home__reportList-list
+                            a(href="/").home__reportList-item 
+                                ul.home__reportList-nav 
+                                    li.home__reportList-nav__i Номер жалобы
+                                    li.home__reportList-nav__i Имя и Фамилия
+                                    li.home__reportList-nav__i Наименование компании
+                                ul.home__reportList-content 
+                                    li.home__reportList-content__i Жалоба №1
+                                    li.home__reportList-content__i Иван Иванов
+                                    li.home__reportList-content__i Google
+                            a(href="/").home__reportList-item 
+                                ul.home__reportList-nav 
+                                    li.home__reportList-nav__i Номер жалобы
+                                    li.home__reportList-nav__i Имя и Фамилия
+                                    li.home__reportList-nav__i Наименование компании
+                                ul.home__reportList-content 
+                                    li.home__reportList-content__i Жалоба №1
+                                    li.home__reportList-content__i Иван Иванов
+                                    li.home__reportList-content__i Google
+
+
+
+
+@@include('components/_footer.pug')
+
+@@include('components/_script.pug')
+

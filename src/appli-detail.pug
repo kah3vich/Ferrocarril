@@ -1,0 +1,119 @@
+@@include('components/_head.pug', {
+    "title": "Страница",
+})
+
+main 
+    @@include('components/_header.pug')
+
+    section.home
+        .containers 
+            .home__wrapper 
+                .menu 
+                    ul.menu__list
+                        li.menu__item#account 
+                            a(href="/") Аккаунт 
+                        li.menu__item#report 
+                            a(href="/") Жалобы 
+                        li.menu__item.menu__item-a#appli 
+                            a(href="/") Заявки 
+                        li.menu__item#exit 
+                            a(href="/") Выйти из аккаунта 
+                .home__blocks
+                    .home__appliDetail
+                        .home__appliDetail-header 
+                            a(href="/").home__appliDetail-back 
+                                img(src="./svg/back.svg" alt="icons")
+                                p Назад
+                            .home__appliDetail-title Заявка №1
+                        .home__appliDetail-line
+                        .home__appliDetail-blocks
+                            .customInput 
+                                label.customInput__label(for="appliDetailTypework")
+                                    .customInput__title Тип доставки
+                                    input(type="text" placeholder="Введите тип доставки" id="appliDetailTypework")
+                            .customInput 
+                                label.customInput__label(for="appliDetailValut")
+                                    .customInput__title Валюта платежа
+                                    input(type="text" placeholder="Введите валюта платежа" id="appliDetailValut")
+                            .customInput 
+                                label.customInput__label(for="appliDetailPod")
+                                    .customInput__title Род подвижного состава / тип контейнера
+                                    input( placeholder="Введите состав / род" type="text" id='appliDetailPod')
+                            .customInput 
+                                label.customInput__label(for="appliDetailSostav")
+                                    .customInput__title Принадлежность подвижного состава
+                                    input(type="text" placeholder="Введите подвижного состава" id="appliDetailSostav")
+                            .customInput 
+                                label.customInput__label(for="datapicker")
+                                    .customInput__title Дата готовности груза
+                                    input(type="text" id="datepicker" placeholder="Введите дату")
+                            .customInput 
+                                label.customInput__label(for="appliDetailCountry")
+                                    .customInput__title Страна отравления
+                                    input(type="text" placeholder="Введите страну отравления" id="appliDetailCountry")
+                            .customInput 
+                                label.customInput__label(for="appliDetailStan")
+                                    .customInput__title Станция отправления
+                                    input( placeholder="Введите станцую отправления" type="text" id='appliDetailStan')
+                            .customInput 
+                                label.customInput__label(for="appliDetailCountrys")
+                                    .customInput__title Страна назначения
+                                    input(type="text" placeholder="Введите cтрану назначения" id="appliDetailCountrys")
+                            .customInput 
+                                label.customInput__label(for="appliDetailStans")
+                                    .customInput__title Станция назначения
+                                    input(type="text" placeholder="Введите станцую назначения" id="appliDetailStans")
+                            .customInput 
+                                label.customInput__label(for="appliDetailInfos")
+                                    .customInput__title Грузоотправитель, ж.д. код., адрес, ОКПО\ИНН\Рег. номер
+                                    input(type="text" placeholder="Введите текст" id="appliDetailInfos")
+                            .customInput 
+                                label.customInput__label(for="appliDetailInfo")
+                                    .customInput__title Грузополучатель, ж.д. код., адрес, ОКПО\ИНН\Рег. номер
+                                    input(type="text" placeholder="Введите текст" id="appliDetailInfo")
+                            .customInput 
+                                label.customInput__label(for="appliDetailCode")
+                                    .customInput__title Наименование, код груза по ГНГ/ЕТСНГ
+                                    input(type="text" placeholder="Введите наименование" id="appliDetailCode")
+                            .customInput 
+                                label.customInput__label(for="appliDetailCount")
+                                    .customInput__title Расчетный вес/количество тон
+                                    input(type="text" placeholder="Введите вес / количество" id="appliDetailCount")
+                            .customInput 
+                                label.customInput__label(for="appliDetailIf")
+                                    .customInput__title Условия перевозки
+                                    input(type="text" placeholder="Введите условия перевозки" id="appliDetailIf")
+                            .customInput 
+                                label.customInput__label(for="appliDetailCount")
+                                    .customInput__title Количество/номера вагонов или авто
+                                    input( placeholder="Введите номер / количество" type="text" id='appliDetailCount')
+                            .customInput 
+                                label.customInput__label(for="appliDetailIran")
+                                    .customInput__title Плательщики по железным дорогам следования груза
+                                    input(type="text" placeholder="Введите текст" id="appliDetailIran")
+                            .customTextarea 
+                                label.customTextarea__label(for="appliDetailAdd")
+                                    .customTextarea__title Примечания
+                                    textarea(placeholder="Введите примечания" id="appliDetailAdd")
+                            .customInput 
+                                label.customInput__label(for="appliDetailPogrus")
+                                    .customInput__title Погрузка/выгрузка
+                                    input(type="text" placeholder="Введите ответ" id="appliDetailPogrus")
+                            .customInput 
+                                label.customInput__label(for="appliDetailKZT")
+                                    .customInput__title Стоимость KZT
+                                    input(type="text" placeholder="Введите стоимость KZT" id="appliDetailKZT")
+                            .customInput 
+                                label.customInput__label(for="appliDetailDates")
+                                    .customInput__title Период подачи
+                                    input(type="text" placeholder="Введите период подачи" id="appliDetailDates")
+                        button.home__appliDetail-btn Скрыть жалобу
+
+
+
+
+
+@@include('components/_footer.pug')
+
+@@include('components/_script.pug')
+

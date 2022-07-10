@@ -1,0 +1,23 @@
+@@include('components/_head.pug', {
+    "title": "Страница",
+})
+
+.signIn
+    .signIn__wrapper
+        .signIn__block
+            h1.signIn__title FERROCARRIL
+            p.signIn__add Авторизация в админ панели
+            .signIn__blocks
+                .signInInput 
+                    label.signInInput__label(for="signInEmail")
+                        input(type="text" placeholder="Введите почту" id="signInEmail")
+                .signInInput 
+                    label.signInInput__label(for="signInPassword")
+                        input(type="text" placeholder="Введите пароль" id="signInPassword")
+            button.signIn__btn Авторизоваться
+
+
+
+@@include('components/_footer.pug')
+
+@@include('components/_script.pug')

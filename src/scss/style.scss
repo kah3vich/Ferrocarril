@@ -1,0 +1,133 @@
+@import 'fonts';
+
+//! --------------------------------------------------------------------
+//! Переменные ---------------------------------------------------------
+//! --------------------------------------------------------------------
+
+$bg: #fff;
+
+//! --------------------------------------------------------------------
+//! Стили --------------------------------------------------------------
+//! --------------------------------------------------------------------
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	user-select: text; // fix
+}
+
+body {
+	background-color: $bg;
+	font-family: Inter;
+}
+
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+input {
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+}
+button {
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+ol,
+ul {
+	padding-left: 0;
+}
+dl,
+ol,
+ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.containers {
+	max-width: 1440px;
+	padding: 0 212px;
+	margin: 0 auto;
+	width: 100%;
+}
+.display-n {
+	display: none !important;
+}
+opacity-h {
+	opacity: 0 !important;
+}
+
+//! --------------------------------------------------------------------
+
+.footer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 45px 0;
+	&__title {
+		font-family: Inter;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		color: #000000;
+	}
+}
+
+.header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 75px;
+	background: #ffffff;
+	border: 1px solid #dce1e5;
+	&__title {
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 39px;
+		color: #000000;
+	}
+}
+
+//! --------------------------------------------------------------------
+//! Подключение файлов -------------------------------------------------
+//! --------------------------------------------------------------------
+
+@import 'index/style';
+@import 'signin/style';
+
+//! --------------------------------------------------------------------
+//! --------------------------------------------------------------------
+//! --------------------------------------------------------------------

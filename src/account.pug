@@ -1,0 +1,42 @@
+@@include('components/_head.pug', {
+    "title": "Страница",
+})
+
+main 
+    @@include('components/_header.pug')
+
+    section.home(style="height: calc(100vh - 206px)")
+        .containers 
+            .home__wrapper 
+                .menu 
+                    ul.menu__list
+                        li.menu__item.menu__item-a#account 
+                            a(href="/") Аккаунт 
+                        li.menu__item#report 
+                            a(href="/") Жалобы 
+                        li.menu__item#appli 
+                            a(href="/") Заявки 
+                        li.menu__item#exit 
+                            a(href="/") Выйти из аккаунта 
+                .home__blocks
+
+                    .home__account
+                        .home__account-title Настройки аккаунта
+                        .home__account-line 
+                        .home__account-blocks 
+                            .customInput 
+                                label.customInput__label(for="accountEmail")
+                                    .customInput__title Почта
+                                    input(type="text" placeholder="Введите почту" id="accountEmail")
+                            .customInput 
+                                label.customInput__label(for="accountPassword")
+                                    .customInput__title Новый пароль
+                                    input(type="text" placeholder="Введите новый пароль" id="accountPassword")
+                        button.home__account-btn Сохранить
+
+
+
+@@include('components/_footer.pug')
+
+@@include('components/_script.pug')
+

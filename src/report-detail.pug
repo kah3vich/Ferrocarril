@@ -1,0 +1,59 @@
+@@include('components/_head.pug', {
+    "title": "Страница",
+})
+
+main 
+    @@include('components/_header.pug')
+
+    section.home
+        .containers 
+            .home__wrapper 
+                .menu 
+                    ul.menu__list
+                        li.menu__item#account 
+                            a(href="/") Аккаунт 
+                        li.menu__item.menu__item-a#report 
+                            a(href="/") Жалобы 
+                        li.menu__item#appli 
+                            a(href="/") Заявки 
+                        li.menu__item#exit 
+                            a(href="/") Выйти из аккаунта 
+                .home__blocks
+                    .home__reportDetail
+                        .home__reportDetail-header 
+                            a(href="/").home__reportDetail-back 
+                                img(src="./svg/back.svg" alt="icons")
+                                p Назад
+                            .home__reportDetail-title Жалоба №1
+                        .home__reportDetail-line
+                        .home__reportDetail-blocks
+                            .customInput 
+                                label.customInput__label(for="reportDetailName")
+                                    .customInput__title Имя
+                                    input(type="text" placeholder="Введите имя" id="reportDetailName")
+                            .customInput 
+                                label.customInput__label(for="reportDetailCompany")
+                                    .customInput__title Наименовании компании
+                                    input(type="text" placeholder="Введите имя компании" id="reportDetailCompany")
+                            .customInput 
+                                label.customInput__label(for="mask__phone")
+                                    .customInput__title Номер телефона
+                                    input( placeholder="Введите номер телефона" type="tel" id='mask__phone')
+                            .customInput 
+                                label.customInput__label(for="reportDetailMessage")
+                                    .customInput__title Сообщение
+                                    input(type="text" placeholder="Введите cообщение" id="reportDetailMessage")
+                            .customTextarea 
+                                label.customTextarea__label(for="reportDetailMessage")
+                                    .customTextarea__title Сообщение
+                                    textarea(placeholder="Введите сообщение" id="reportDetailMessage")
+                        button.home__reportDetail-btn Скрыть жалобу
+
+
+
+
+
+@@include('components/_footer.pug')
+
+@@include('components/_script.pug')
+

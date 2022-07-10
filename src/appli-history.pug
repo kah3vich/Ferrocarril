@@ -1,0 +1,62 @@
+@@include('components/_head.pug', {
+    "title": "Страница",
+})
+
+main 
+    @@include('components/_header.pug')
+
+    section.home
+        .containers 
+            .home__wrapper 
+                .menu 
+                    ul.menu__list
+                        li.menu__item#account 
+                            a(href="/") Аккаунт 
+                        li.menu__item#report 
+                            a(href="/") Жалобы 
+                        li.menu__item.menu__item-a#appli 
+                            a(href="/") Заявки 
+                        li.menu__item#exit 
+                            a(href="/") Выйти из аккаунта 
+                .home__blocks
+                    .home__appliHistory
+                        .home__appliHistory-tabs
+                            a(href="/").home__appliHistory-tab
+                                h5 Новые заявки
+                                span 3
+                            a(href="/").home__appliHistory-tab.home__appliHistory-tab__a
+                                h5 История заявок
+                        .home__appliHistory-line
+                        .home__appliHistory-search
+                            label.home__appliHistory-label(for="appliSearch")
+                                img( class="home__appliHistory-decor" src="./svg/search.svg" alt="icon")
+                                input(type="text" class="home__appliHistory-input" placeholder="Поиск")
+                                img( class="home__appliHistory-decor" src="./svg/close.svg" alt="icon")
+                        .home__appliHistory-lines
+                        .home__appliHistory-list
+                            a(href="/").home__appliHistory-item 
+                                ul.home__appliHistory-nav 
+                                    li.home__appliHistory-nav__i Номер заявки
+                                    li.home__appliHistory-nav__i Грузоотправитель
+                                    li.home__appliHistory-nav__i Грузополучатель
+                                ul.home__appliHistory-content 
+                                    li.home__appliHistory-content__i Заявка №1
+                                    li.home__appliHistory-content__i DPD
+                                    li.home__appliHistory-content__i ИНН 7777777777
+                            a(href="/").home__appliHistory-item 
+                                ul.home__appliHistory-nav 
+                                    li.home__appliHistory-nav__i Номер заявки
+                                    li.home__appliHistory-nav__i Грузоотправитель
+                                    li.home__appliHistory-nav__i Грузополучатель
+                                ul.home__appliHistory-content 
+                                    li.home__appliHistory-content__i Заявка №1
+                                    li.home__appliHistory-content__i DPD
+                                    li.home__appliHistory-content__i ИНН 7777777777
+
+
+
+
+@@include('components/_footer.pug')
+
+@@include('components/_script.pug')
+
