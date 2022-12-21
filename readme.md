@@ -44,6 +44,12 @@
 npm install
 ```
 
+### Start project:
+
+```bash
+npm run gulp
+```
+
 <!-- ||| -->
 
 <div id="description" align="center">
